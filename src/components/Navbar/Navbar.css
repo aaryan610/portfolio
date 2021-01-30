@@ -1,0 +1,60 @@
+.navbar {
+  position: absolute;
+  top: 2em;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 75vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: transparent;
+  z-index: 1000;
+}
+
+.navbar img {
+  height: 20px;
+}
+
+.navbar .center {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5em;
+  justify-items: center;
+}
+
+.navbar .center a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+}
+
+.reachOut {
+  position: fixed;
+  background-color: #2a9d8f;
+  color: #fff;
+  padding: 20px;
+  border-radius: 50%;
+  top: 0;
+  right: 25vh;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.reachOut.move {
+  opacity: 1;
+  pointer-events: all;
+  top: 85vh;
+  right: 2em;
+  z-index: 1000;
+}
+/*# sourceMappingURL=Navbar.css.map */

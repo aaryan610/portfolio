@@ -1,0 +1,73 @@
+.introCont {
+  display: block;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  .semicircle {
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100vh;
+    width: 200vh;
+    border-radius: 0 0 150vh 150vh;
+    background-color: #2a9d8f;
+    z-index: -1;
+  }
+  .introDesc {
+    margin-top: 30vh;
+    margin-left: 15vw;
+    display: flex;
+    color: #fff;
+
+    img {
+      height: 40vh;
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      margin-left: 7.5em;
+
+      h1 {
+        font-size: 3em;
+        font-weight: 600;
+        margin-bottom: 0.5em;
+      }
+
+      p {
+        width: 40vw;
+      }
+
+      button {
+        position: relative;
+        margin: 2em 0 0 0;
+        width: min-content;
+        white-space: nowrap;
+        color: #fff;
+        background: none;
+        padding: 10px 45px;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        font-size: 1.1em;
+        font-weight: 500;
+        overflow: hidden;
+        outline: none;
+        cursor: pointer;
+        transition: 0.3s all ease;
+
+        i {
+          position: absolute;
+          animation: down 0.3s infinite alternate;
+        }
+
+        &:hover {
+          background-color: #fff;
+          color: #2a9d8f;
+        }
+      }
+    }
+  }
+}
