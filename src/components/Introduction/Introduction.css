@@ -40,7 +40,10 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 7.5em;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-left: 1em;
 }
 
 .introCont .introDesc .right h1 {
@@ -64,10 +67,9 @@
   background: none;
   padding: 10px 45px;
   border-radius: 5px;
-  border: 1px solid #fff;
+  border: none;
   font-size: 1.1em;
   font-weight: 500;
-  overflow: hidden;
   outline: none;
   cursor: pointer;
   -webkit-transition: 0.3s all ease;
@@ -83,5 +85,184 @@
 .introCont .introDesc .right button:hover {
   background-color: #fff;
   color: #2a9d8f;
+}
+
+.introCont .introDesc .right button::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  -webkit-animation: pulse 1.7s infinite;
+          animation: pulse 1.7s infinite;
+}
+
+.introCont .flyingObjects .object {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.introCont .flyingObjects .object1 {
+  height: 100px;
+  width: 100px;
+  background-color: rgba(233, 196, 106, 0.6);
+  -webkit-animation: move1 7s linear infinite alternate;
+          animation: move1 7s linear infinite alternate;
+}
+
+.introCont .flyingObjects .object2 {
+  height: 70px;
+  width: 70px;
+  background-color: rgba(244, 162, 97, 0.5);
+  -webkit-animation: move1 5s linear infinite alternate;
+          animation: move1 5s linear infinite alternate;
+}
+
+.introCont .flyingObjects .object3 {
+  height: 50px;
+  width: 50px;
+  background-color: #e76f51;
+  -webkit-animation: move2 6s linear infinite alternate;
+          animation: move2 6s linear infinite alternate;
+}
+
+@-webkit-keyframes move1 {
+  0% {
+    bottom: 5vh;
+    left: 5vw;
+  }
+  20% {
+    bottom: 7vh;
+    left: 50vw;
+  }
+  40% {
+    bottom: 25vh;
+    left: 90vw;
+  }
+  60% {
+    bottom: 80vh;
+    left: 50vw;
+  }
+  80% {
+    bottom: 50vh;
+    left: 20vw;
+  }
+  100% {
+    bottom: 10vh;
+    left: 10vw;
+  }
+}
+
+@keyframes move1 {
+  0% {
+    bottom: 5vh;
+    left: 5vw;
+  }
+  20% {
+    bottom: 7vh;
+    left: 50vw;
+  }
+  40% {
+    bottom: 25vh;
+    left: 90vw;
+  }
+  60% {
+    bottom: 80vh;
+    left: 50vw;
+  }
+  80% {
+    bottom: 50vh;
+    left: 20vw;
+  }
+  100% {
+    bottom: 10vh;
+    left: 10vw;
+  }
+}
+
+@-webkit-keyframes move2 {
+  0% {
+    bottom: 20vh;
+    left: 15vw;
+  }
+  20% {
+    bottom: 25vh;
+    left: 40vw;
+  }
+  50% {
+    bottom: 25vh;
+    left: 90vw;
+  }
+  70% {
+    bottom: 80vh;
+    left: 70vw;
+  }
+  90% {
+    bottom: 60vh;
+    left: 10vw;
+  }
+  100% {
+    bottom: 10vh;
+    left: 10vw;
+  }
+}
+
+@keyframes move2 {
+  0% {
+    bottom: 20vh;
+    left: 15vw;
+  }
+  20% {
+    bottom: 25vh;
+    left: 40vw;
+  }
+  50% {
+    bottom: 25vh;
+    left: 90vw;
+  }
+  70% {
+    bottom: 80vh;
+    left: 70vw;
+  }
+  90% {
+    bottom: 60vh;
+    left: 10vw;
+  }
+  100% {
+    bottom: 10vh;
+    left: 10vw;
+  }
+}
+
+@-webkit-keyframes pulse {
+  from {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+  }
+  to {
+    height: 150%;
+    width: 110%;
+    opacity: 0.5;
+  }
+}
+
+@keyframes pulse {
+  from {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+  }
+  to {
+    height: 150%;
+    width: 110%;
+    opacity: 0.5;
+  }
 }
 /*# sourceMappingURL=Introduction.css.map */

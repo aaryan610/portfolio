@@ -7,7 +7,7 @@ import { Element } from 'react-scroll';
 const interests = () => {
     return(
         <React.Fragment>
-            <Element name="interests" className="introCont">
+            <Element name="interests" className="interestsCont">
                 <div className="semicircle"></div>
                 <Fade left>
                     <div className="introDesc">

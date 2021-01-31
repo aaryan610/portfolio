@@ -16,6 +16,7 @@
     background-color: #2a9d8f;
     z-index: -1;
   }
+
   .introDesc {
     margin-top: 30vh;
     margin-left: 15vw;
@@ -29,7 +30,8 @@
     .right {
       display: flex;
       flex-direction: column;
-      margin-left: 7.5em;
+      align-items: flex-start;
+      margin-left: 1em;
 
       h1 {
         font-size: 3em;
@@ -50,10 +52,9 @@
         background: none;
         padding: 10px 45px;
         border-radius: 5px;
-        border: 1px solid #fff;
+        border: none;
         font-size: 1.1em;
         font-weight: 500;
-        overflow: hidden;
         outline: none;
         cursor: pointer;
         transition: 0.3s all ease;
@@ -67,7 +68,167 @@
           background-color: #fff;
           color: #2a9d8f;
         }
+
+        &::after {
+          position: absolute;
+          content: "";
+          height: 100%;
+          width: 100%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: rgba(255, 255, 255, 0.4);
+          border-radius: 5px;
+          animation: pulse 1.7s infinite;
+        }
       }
     }
+  }
+
+  .flyingObjects {
+    .object {
+      position: absolute;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .object1 {
+      height: 100px;
+      width: 100px;
+      background-color: rgba(233, 196, 106, 0.6);
+      animation: move1 7s linear infinite alternate;
+    }
+
+    .object2 {
+      height: 70px;
+      width: 70px;
+      background-color: rgba(244, 162, 97, 0.5);
+      animation: move1 5s linear infinite alternate;
+    }
+
+    .object3 {
+      height: 50px;
+      width: 50px;
+      background-color: #e76f51;
+      animation: move2 6s linear infinite alternate;
+    }
+
+    @keyframes move1 {
+      0% {
+        bottom: 5vh;
+        left: 5vw;
+      }
+      20% {
+        bottom: 7vh;
+        left: 50vw;
+      }
+      40% {
+        bottom: 25vh;
+        left: 90vw;
+      }
+      60% {
+        bottom: 80vh;
+        left: 50vw;
+      }
+      80% {
+        bottom: 50vh;
+        left: 20vw;
+      }
+      100% {
+        bottom: 10vh;
+        left: 10vw;
+      }
+    }
+
+    @keyframes move2 {
+      0% {
+        bottom: 20vh;
+        left: 15vw;
+      }
+      20% {
+        bottom: 25vh;
+        left: 40vw;
+      }
+      50% {
+        bottom: 25vh;
+        left: 90vw;
+      }
+      70% {
+        bottom: 80vh;
+        left: 70vw;
+      }
+      90% {
+        bottom: 60vh;
+        left: 10vw;
+      }
+      100% {
+        bottom: 10vh;
+        left: 10vw;
+      }
+    }
+  }
+
+  // .container {
+  //   position: relative;
+  //   top: 20em;
+  //   right: 6em;
+  //   width: 100%;
+  //   height: 100%;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+
+  //   .card1,
+  //   .card2,
+  //   .card3,
+  //   .card4 {
+  //     position: absolute;
+  //     border-radius: 5px;
+  //     background-size: cover;
+  //     background-position: center center;
+  //     background-repeat: no-repeat;
+  //     will-change: transform;
+  //   }
+
+  //   .card1 {
+  //     width: 20vw;
+  //     height: 20vw;
+  //     background-image: url("../../../src/assets/images/introduction/background.svg");
+  //   }
+
+  //   .card2 {
+  //     top: 3vw;
+  //     width: 7vw;
+  //     height: 7vw;
+  //     background-image: url("../../../src/assets/images/introduction/sun.svg");
+  //   }
+
+  //   .card3 {
+  //     top: 3vw;
+  //     left: 10vw;
+  //     opacity: 0.9;
+  //     width: 10vw;
+  //     height: 10vw;
+  //     background-image: url("../../../src/assets/images/introduction/clouds.svg");
+  //   }
+
+  //   .card4 {
+  //     width: 10vw;
+  //     height: 10vw;
+  //     background-image: url("../../../src/assets/images/introduction/bird.svg");
+  //   }
+  // }
+}
+
+@keyframes pulse {
+  from {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+  }
+  to {
+    height: 150%;
+    width: 110%;
+    opacity: 0.5;
   }
 }

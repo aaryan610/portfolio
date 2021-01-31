@@ -1,11 +1,11 @@
-.introCont {
+.interestsCont {
   position: relative;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
 }
 
-.introCont .semicircle {
+.interestsCont .semicircle {
   position: absolute;
   top: -30%;
   left: 50%;
@@ -18,7 +18,7 @@
   z-index: -1;
 }
 
-.introCont .introDesc {
+.interestsCont .introDesc {
   margin-top: 30vh;
   margin-left: 15vw;
   display: -webkit-box;
@@ -27,11 +27,11 @@
   color: #fff;
 }
 
-.introCont .introDesc img {
+.interestsCont .introDesc img {
   height: 40vh;
 }
 
-.introCont .introDesc .right {
+.interestsCont .introDesc .right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,16 +42,16 @@
   margin-left: 7.5em;
 }
 
-.introCont .introDesc .right h1 {
+.interestsCont .introDesc .right h1 {
   font-weight: 600;
   margin-bottom: 0.5em;
 }
 
-.introCont .introDesc .right p {
+.interestsCont .introDesc .right p {
   width: 40vw;
 }
 
-.introCont .introDesc .right button {
+.interestsCont .introDesc .right button {
   position: relative;
   margin: 2em 0 0 0;
   width: -webkit-min-content;
@@ -72,18 +72,18 @@
   transition: 0.3s all ease;
 }
 
-.introCont .introDesc .right button i {
+.interestsCont .introDesc .right button i {
   position: absolute;
   -webkit-animation: down 0.3s infinite alternate;
           animation: down 0.3s infinite alternate;
 }
 
-.introCont .introDesc .right button:hover {
+.interestsCont .introDesc .right button:hover {
   background-color: #fff;
   color: #2a9d8f;
 }
 
-.introCont .blob {
+.interestsCont .blob {
   position: absolute;
   top: 0;
   left: 0;
