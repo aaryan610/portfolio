@@ -7,3 +7,8 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}

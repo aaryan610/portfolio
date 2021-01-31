@@ -8,7 +8,6 @@
   width: 75vw;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   background: transparent;
   z-index: 1000;
 
@@ -31,22 +30,43 @@
   }
 }
 
-.reachOut {
-  position: fixed;
-  background-color: #2a9d8f;
-  color: #fff;
-  padding: 20px;
-  border-radius: 50%;
-  top: 0;
-  right: 25vh;
-  opacity: 0;
-  pointer-events: none;
+@media only screen and (max-width: 992px) {
+  .navbar {
+    flex-direction: row-reverse;
+    width: 90vw;
 
-  &.move {
-    opacity: 1;
-    pointer-events: all;
-    top: 85vh;
-    right: 2em;
-    z-index: 1000;
+    img {
+      height: 15px;
+    }
+
+    .center {
+      a {
+        display: none;
+      }
+
+      div {
+        outline: none;
+        cursor: pointer;
+
+        .line {
+          height: 3px;
+          width: 30px;
+          background-color: #fff;
+        }
+
+        .line2 {
+          width: 20px;
+        }
+
+        .line3 {
+          width: 10px;
+        }
+
+        .line2,
+        .line3 {
+          margin-top: 6px;
+        }
+      }
+    }
   }
 }

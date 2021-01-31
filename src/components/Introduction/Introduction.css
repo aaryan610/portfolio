@@ -102,6 +102,32 @@
           animation: pulse 1.7s infinite;
 }
 
+@-webkit-keyframes pulse {
+  from {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+  }
+  to {
+    height: 150%;
+    width: 110%;
+    opacity: 0.5;
+  }
+}
+
+@keyframes pulse {
+  from {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+  }
+  to {
+    height: 150%;
+    width: 110%;
+    opacity: 0.5;
+  }
+}
+
 .introCont .flyingObjects .object {
   position: absolute;
   border-radius: 50%;
@@ -111,7 +137,7 @@
 .introCont .flyingObjects .object1 {
   height: 100px;
   width: 100px;
-  background-color: rgba(233, 196, 106, 0.6);
+  background-color: rgba(38, 70, 83, 0.3);
   -webkit-animation: move1 7s linear infinite alternate;
           animation: move1 7s linear infinite alternate;
 }
@@ -119,7 +145,7 @@
 .introCont .flyingObjects .object2 {
   height: 70px;
   width: 70px;
-  background-color: rgba(244, 162, 97, 0.5);
+  background-color: rgba(63, 155, 162, 0.8);
   -webkit-animation: move1 5s linear infinite alternate;
           animation: move1 5s linear infinite alternate;
 }
@@ -127,7 +153,7 @@
 .introCont .flyingObjects .object3 {
   height: 50px;
   width: 50px;
-  background-color: #e76f51;
+  background-color: #264653;
   -webkit-animation: move2 6s linear infinite alternate;
           animation: move2 6s linear infinite alternate;
 }
@@ -240,29 +266,183 @@
   }
 }
 
-@-webkit-keyframes pulse {
-  from {
+@media only screen and (max-width: 992px) {
+  .introCont .introDesc {
+    margin-top: 20vh;
+    margin-left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .introCont .introDesc img {
+    margin-top: 3em;
+    height: 30vh;
+  }
+  .introCont .introDesc .right {
+    width: 90vw;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .introCont .introDesc .right h1 {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+  }
+  .introCont .introDesc .right p {
+    font-size: 0.95em;
+    width: 100%;
+  }
+  .introCont .introDesc .right button {
+    margin: 2em 0 0 0;
+    padding: 10px 45px;
+    font-size: 0.9em;
+  }
+  .introCont .introDesc .right button::after {
+    position: absolute;
+    content: "";
     height: 100%;
     width: 100%;
-    opacity: 0;
   }
-  to {
-    height: 150%;
-    width: 110%;
-    opacity: 0.5;
+  @-webkit-keyframes pulse {
+    from {
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+    }
+    to {
+      height: 150%;
+      width: 110%;
+      opacity: 0.5;
+    }
   }
-}
-
-@keyframes pulse {
-  from {
-    height: 100%;
-    width: 100%;
-    opacity: 0;
+  @keyframes pulse {
+    from {
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+    }
+    to {
+      height: 150%;
+      width: 110%;
+      opacity: 0.5;
+    }
   }
-  to {
-    height: 150%;
-    width: 110%;
-    opacity: 0.5;
+  .introCont .flyingObjects .object2 {
+    background-color: rgba(63, 155, 162, 0.8);
+    -webkit-animation: move2 4s linear infinite alternate;
+            animation: move2 4s linear infinite alternate;
+  }
+  .introCont .flyingObjects .object3 {
+    display: none;
+  }
+  @-webkit-keyframes move1 {
+    0% {
+      bottom: 5vh;
+      left: 5vw;
+    }
+    20% {
+      bottom: 7vh;
+      left: 50vw;
+    }
+    40% {
+      bottom: 25vh;
+      left: 90vw;
+    }
+    60% {
+      bottom: 80vh;
+      left: 50vw;
+    }
+    80% {
+      bottom: 50vh;
+      left: 20vw;
+    }
+    100% {
+      bottom: 10vh;
+      left: 10vw;
+    }
+  }
+  @keyframes move1 {
+    0% {
+      bottom: 5vh;
+      left: 5vw;
+    }
+    20% {
+      bottom: 7vh;
+      left: 50vw;
+    }
+    40% {
+      bottom: 25vh;
+      left: 90vw;
+    }
+    60% {
+      bottom: 80vh;
+      left: 50vw;
+    }
+    80% {
+      bottom: 50vh;
+      left: 20vw;
+    }
+    100% {
+      bottom: 10vh;
+      left: 10vw;
+    }
+  }
+  @-webkit-keyframes move2 {
+    0% {
+      bottom: 20vh;
+      left: 15vw;
+    }
+    20% {
+      bottom: 25vh;
+      left: 40vw;
+    }
+    50% {
+      bottom: 25vh;
+      left: 90vw;
+    }
+    70% {
+      bottom: 80vh;
+      left: 70vw;
+    }
+    90% {
+      bottom: 60vh;
+      left: 10vw;
+    }
+    100% {
+      bottom: 10vh;
+      left: 10vw;
+    }
+  }
+  @keyframes move2 {
+    0% {
+      bottom: 20vh;
+      left: 15vw;
+    }
+    20% {
+      bottom: 25vh;
+      left: 40vw;
+    }
+    50% {
+      bottom: 25vh;
+      left: 90vw;
+    }
+    70% {
+      bottom: 80vh;
+      left: 70vw;
+    }
+    90% {
+      bottom: 60vh;
+      left: 10vw;
+    }
+    100% {
+      bottom: 10vh;
+      left: 10vw;
+    }
   }
 }
 /*# sourceMappingURL=Introduction.css.map */

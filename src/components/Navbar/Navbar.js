@@ -13,10 +13,14 @@ const navbar = () => {
                         <a href="#" className="link">Projects</a>
                         <a href="#" className="link">Skills</a>
                         <a href="#" className="link">Reach Out</a>
+                        <div className="toggle">
+                            <div className="line line1"></div>
+                            <div className="line line2"></div>
+                            <div className="line line3"></div>
+                        </div>
                     </div>
                 </Fade>
             </nav>
-            <a href="mailto:aaryankhandu123@gmail.com" className="reachOut"><i className="fas fa-envelope"></i></a>
         </React.Fragment>
     );
 };

@@ -2,29 +2,18 @@ import React, { useEffect } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Introduction from "../../components/Introduction/Introduction";
 import Interests from "../../components/Interests/Interests";
-
-const reachOut = () => {
-    const button = document.querySelector(".reachOut");
-
-    window.addEventListener("scroll", () => {
-      if(window.scrollY >= window.innerHeight) {
-        button.classList.add("move");
-      } else {
-        button.classList.remove("move");
-      }
-    });
-};
+import Projects from "../../components/Projects/Projects";
 
 const Dashboard = () => {
     useEffect(() => {
-        reachOut();
     }, []);
 
     return(
         <React.Fragment>
-            <Navbar />
-            <Introduction />
-            <Interests />
+          <Navbar />
+          <Introduction />
+          <Interests />
+          <Projects />
         </React.Fragment>
     );
 };

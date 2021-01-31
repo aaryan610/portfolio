@@ -2,7 +2,7 @@ import React from "react";
 import "./Introduction.css";
 import { Fade } from "react-reveal";
 import Tilt from "react-tilt";
-import { Link } from 'react-scroll';
+import { Link } from "react-scroll";
 import IntroductionPerson from "../../assets/images/introduction/1.png";
 // import { useSpring, animated } from 'react-spring'
 

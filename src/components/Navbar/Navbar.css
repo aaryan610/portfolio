@@ -11,9 +11,6 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background: transparent;
   z-index: 1000;
 }
@@ -38,23 +35,38 @@
   color: #fff;
 }
 
-.reachOut {
-  position: fixed;
-  background-color: #2a9d8f;
-  color: #fff;
-  padding: 20px;
-  border-radius: 50%;
-  top: 0;
-  right: 25vh;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.reachOut.move {
-  opacity: 1;
-  pointer-events: all;
-  top: 85vh;
-  right: 2em;
-  z-index: 1000;
+@media only screen and (max-width: 992px) {
+  .navbar {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    width: 90vw;
+  }
+  .navbar img {
+    height: 15px;
+  }
+  .navbar .center a {
+    display: none;
+  }
+  .navbar .center div {
+    outline: none;
+    cursor: pointer;
+  }
+  .navbar .center div .line {
+    height: 3px;
+    width: 30px;
+    background-color: #fff;
+  }
+  .navbar .center div .line2 {
+    width: 20px;
+  }
+  .navbar .center div .line3 {
+    width: 10px;
+  }
+  .navbar .center div .line2,
+  .navbar .center div .line3 {
+    margin-top: 6px;
+  }
 }
 /*# sourceMappingURL=Navbar.css.map */
