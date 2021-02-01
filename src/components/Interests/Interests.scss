@@ -14,9 +14,8 @@
 
   .hand {
     position: absolute;
-    right: -5em;
+    right: -9em;
     top: 6em;
-    transform: rotate(-90deg) !important;
     z-index: 0;
   }
 
@@ -64,6 +63,43 @@
       }
     }
   }
+
+  .pageTransitions {
+    .layer {
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+      top: 0;
+      left: -100vw;
+      z-index: 1001;
+    }
+
+    &.show {
+      .layer1 {
+        background-color: #e9c46a;
+        animation: transition 0.6s ease forwards;
+      }
+
+      .layer2 {
+        background-color: #f4a261;
+        animation: transition 0.6s ease 0.3s forwards;
+      }
+
+      .layer3 {
+        background-color: #e76f51;
+        animation: transition 0.6s ease 0.6s forwards;
+      }
+
+      @keyframes transition {
+        from {
+          left: -100vw;
+        }
+        to {
+          left: 0;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 992px) {
@@ -80,9 +116,7 @@
 
     .content {
       margin: 10vh 1em 0;
-      display: grid;
       grid-template-columns: repeat(1, 1fr);
-      grid-gap: 1.5em;
 
       & > div {
         display: flex;

@@ -1,18 +1,179 @@
 .projectsCont {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
+  background-color: #ffd1c1;
   overflow: hidden;
+
+  .content {
+    z-index: 1000;
+
+    .heading {
+      text-align: right;
+      color: #000;
+      font-size: 3em;
+      font-weight: 600;
+      margin: 0.5em 1em 0 0;
+    }
+
+    .owl-theme {
+      width: 95vw;
+      margin: 15vh 2vw;
+
+      .project {
+        display: block;
+        padding: 30px;
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(20px);
+        border-radius: 10px;
+        border: 1px solid #fff;
+        cursor: pointer;
+        transition: 0.3s all ease;
+
+        &:hover {
+          transform: scale(0.95);
+        }
+
+        .title {
+          font-size: 1.5em;
+          color: #000;
+        }
+
+        img {
+          margin-top: 2em;
+          width: 100%;
+          border-radius: 10px;
+        }
+      }
+
+      .owl-prev,
+      .owl-next {
+        font-size: 2em;
+        border: 1px solid #000;
+        background-color: #000;
+        color: #fff;
+        border-radius: 50%;
+        height: 2em;
+        width: 2em;
+        outline: none;
+        transition: 0.3s all ease;
+
+        &:hover {
+          border: 1px solid #fff;
+          background-color: #fff;
+          color: #000;
+        }
+      }
+    }
+  }
+
+  .pageTransitions {
+    .layer {
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+      top: 0;
+      left: -100vw;
+      z-index: 1001;
+    }
+
+    &.show {
+      .layer1 {
+        background-color: #e9c46a;
+        animation: transition 0.6s ease forwards;
+      }
+
+      .layer2 {
+        background-color: #f4a261;
+        animation: transition 0.6s ease 0.3s forwards;
+      }
+
+      .layer3 {
+        background-color: #e76f51;
+        animation: transition 0.6s ease 0.6s forwards;
+      }
+
+      @keyframes transition {
+        from {
+          left: -100vw;
+        }
+        to {
+          left: 0;
+        }
+      }
+    }
+  }
+
+  // .hooks-main > svg {
+  //   display: none;
+  // }
+
+  // .hooks-main > div {
+  //   position: absolute;
+  //   will-change: transform;
+  //   border-radius: 50%;
+  //   background: lightcoral;
+  //   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  //   opacity: 0.6;
+  // }
+
+  // .hooks-main > div:nth-child(1) {
+  //   width: 120px;
+  //   height: 120px;
+  // }
+
+  // .hooks-main > div:nth-child(2) {
+  //   width: 250px;
+  //   height: 250px;
+  // }
+
+  // .hooks-main > div:nth-child(3) {
+  //   width: 150px;
+  //   height: 150px;
+  // }
+
+  // .hooks-main > div::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 20px;
+  //   left: 20px;
+  //   width: 40px;
+  //   height: 40px;
+  //   border-radius: 50%;
+  //   background: rgba(255, 255, 255, 0.8);
+  // }
+
+  // .hooks-main > div:nth-child(2)::after {
+  //   top: 70px;
+  //   left: 70px;
+  //   width: 70px;
+  //   height: 70px;
+  // }
+
+  // .hooks-main > div:nth-child(3)::after {
+  //   top: 50px;
+  //   left: 50px;
+  //   width: 50px;
+  //   height: 50px;
+  // }
+
+  // .hooks-main {
+  //   position: absolute;
+  //   width: 100%;
+  //   height: 100%;
+  //   filter: url("#goo");
+  //   overflow: hidden;
+  // }
 
   .blob {
     position: absolute;
     top: 0;
     left: 0;
-    fill: #023f92;
+    fill: #d57575;
     width: 50vmax;
-    z-index: -1;
     animation: move 10s ease-in-out infinite;
     transform-origin: 50% 50%;
+    z-index: 0;
   }
 }
 
@@ -34,5 +195,51 @@
   }
   100% {
     transform: scale(1) translate(10px, -30px);
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .projectsCont {
+    .content {
+      .heading {
+        text-align: right;
+        color: #000;
+        font-size: 2em;
+        font-weight: 600;
+        margin: 1em 1.5em 0 0;
+      }
+
+      .owl-theme {
+        width: 90vw;
+        margin: 10vh 4vw;
+
+        .project {
+          .title {
+            font-size: 1.7em;
+          }
+
+          img {
+            width: 100%;
+            border-radius: 10px;
+          }
+        }
+
+        .owl-prev,
+        .owl-next {
+          font-size: 1.5em;
+        }
+      }
+    }
+
+    .blob {
+      position: absolute;
+      top: 0;
+      left: 0;
+      fill: #d57575;
+      width: 50vmax;
+      animation: move 10s ease-in-out infinite;
+      transform-origin: 50% 50%;
+      z-index: 0;
+    }
   }
 }

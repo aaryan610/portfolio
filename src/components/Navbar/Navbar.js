@@ -2,6 +2,7 @@ import React from "react";
 import "./Navbar.css";
 import { Fade } from "react-reveal";
 import LogoWhite from "../../assets/images/logos/logo-white.png";
+import { Link } from "react-scroll";
 
 const navbar = () => {
     return(
@@ -10,9 +11,16 @@ const navbar = () => {
                 <Fade down>
                     <img src={ LogoWhite } alt="Main Logo" />
                     <div className="center">
-                        <a href="#" className="link">Projects</a>
-                        <a href="#" className="link">Skills</a>
-                        <a href="#" className="link">Reach Out</a>
+                        <Link to="interests" spy={true} smooth={true} duration={800}>
+                            Interests
+                        </Link>
+                        <Link to="projects" spy={true} smooth={true} duration={800}>
+                            Projects
+                        </Link>
+                        <a href="#">Résumé</a>
+                        <Link to="reachout" spy={true} smooth={true} duration={800}>
+                            Reach Out
+                        </Link>
                         <div className="toggle">
                             <div className="line line1"></div>
                             <div className="line line2"></div>

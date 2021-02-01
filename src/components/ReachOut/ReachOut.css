@@ -1,0 +1,120 @@
+.reachOutCont {
+  display: block;
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #5d2a42;
+  overflow: hidden;
+}
+
+.reachOutCont .hand {
+  position: absolute;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  top: -75%;
+  left: 2%;
+}
+
+.reachOutCont .content {
+  text-align: right;
+  margin: 1em 3em 0 0;
+}
+
+.reachOutCont .content .heading {
+  color: #fff;
+  font-size: 3em;
+  font-weight: 600;
+}
+
+.reachOutCont .content .text {
+  margin-top: 1em;
+  color: #fff;
+}
+
+.reachOutCont .content .socialMedia {
+  margin-top: 5em;
+}
+
+.reachOutCont .content .socialMedia .row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  margin-left: 50vw;
+}
+
+.reachOutCont .content .socialMedia .row a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  padding: 0 0.8em;
+}
+
+.reachOutCont .content .socialMedia .row a i {
+  color: #fff;
+  font-size: 3em;
+}
+
+.reachOutCont .content .socialMedia .row a div {
+  position: absolute;
+  font-size: 0.8em;
+  width: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 50%;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+}
+
+.reachOutCont .content .socialMedia .row a:not(:first-child) {
+  border-left: 1px solid #747171;
+}
+
+.reachOutCont .content .socialMedia .row a:hover div {
+  top: 120%;
+  opacity: 1;
+  z-index: inherit;
+}
+
+.reachOutCont .container {
+  position: relative;
+  top: 15em;
+  right: -27em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.reachOutCont .container .card1,
+.reachOutCont .container .card2 {
+  position: absolute;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  will-change: transform;
+}
+
+.reachOutCont .container .card1 {
+  width: 20vw;
+  height: 20vw;
+  background-image: url("../../../src/assets/images/reachOut/background.png");
+  border-radius: 50%;
+}
+
+.reachOutCont .container .card2 {
+  top: 3vw;
+  width: 7vw;
+  height: 17vw;
+  background-image: url("../../../src/assets/images/reachOut/man-sitting-on-chair.png");
+}
+/*# sourceMappingURL=ReachOut.css.map */

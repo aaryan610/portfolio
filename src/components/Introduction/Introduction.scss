@@ -79,7 +79,16 @@
           transform: translate(-50%, -50%);
           background-color: rgba(255, 255, 255, 0.4);
           border-radius: 5px;
-          animation: pulse 1.7s infinite;
+          animation: pulse 1s infinite alternate;
+        }
+      }
+
+      @keyframes down {
+        from {
+          margin-top: 0;
+        }
+        to {
+          margin-top: 0.2em;
         }
       }
 
@@ -180,57 +189,6 @@
       }
     }
   }
-
-  // .container {
-  //   position: relative;
-  //   top: 20em;
-  //   right: 6em;
-  //   width: 100%;
-  //   height: 100%;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
-
-  //   .card1,
-  //   .card2,
-  //   .card3,
-  //   .card4 {
-  //     position: absolute;
-  //     border-radius: 5px;
-  //     background-size: cover;
-  //     background-position: center center;
-  //     background-repeat: no-repeat;
-  //     will-change: transform;
-  //   }
-
-  //   .card1 {
-  //     width: 20vw;
-  //     height: 20vw;
-  //     background-image: url("../../../src/assets/images/introduction/background.svg");
-  //   }
-
-  //   .card2 {
-  //     top: 3vw;
-  //     width: 7vw;
-  //     height: 7vw;
-  //     background-image: url("../../../src/assets/images/introduction/sun.svg");
-  //   }
-
-  //   .card3 {
-  //     top: 3vw;
-  //     left: 10vw;
-  //     opacity: 0.9;
-  //     width: 10vw;
-  //     height: 10vw;
-  //     background-image: url("../../../src/assets/images/introduction/clouds.svg");
-  //   }
-
-  //   .card4 {
-  //     width: 10vw;
-  //     height: 10vw;
-  //     background-image: url("../../../src/assets/images/introduction/bird.svg");
-  //   }
-  // }
 }
 
 @media only screen and (max-width: 992px) {
@@ -290,11 +248,7 @@
     }
 
     .flyingObjects {
-      .object2 {
-        background-color: rgba(63, 155, 162, 0.8);
-        animation: move2 4s linear infinite alternate;
-      }
-
+      .object2,
       .object3 {
         display: none;
       }

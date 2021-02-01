@@ -15,10 +15,8 @@
 
 .interestsCont .hand {
   position: absolute;
-  right: -5em;
+  right: -9em;
   top: 6em;
-  -webkit-transform: rotate(-90deg) !important;
-          transform: rotate(-90deg) !important;
   z-index: 0;
 }
 
@@ -73,6 +71,51 @@
   border-left: 1px solid #979797;
 }
 
+.interestsCont .pageTransitions .layer {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: -100vw;
+  z-index: 1001;
+}
+
+.interestsCont .pageTransitions.show .layer1 {
+  background-color: #e9c46a;
+  -webkit-animation: transition 0.6s ease forwards;
+          animation: transition 0.6s ease forwards;
+}
+
+.interestsCont .pageTransitions.show .layer2 {
+  background-color: #f4a261;
+  -webkit-animation: transition 0.6s ease 0.3s forwards;
+          animation: transition 0.6s ease 0.3s forwards;
+}
+
+.interestsCont .pageTransitions.show .layer3 {
+  background-color: #e76f51;
+  -webkit-animation: transition 0.6s ease 0.6s forwards;
+          animation: transition 0.6s ease 0.6s forwards;
+}
+
+@-webkit-keyframes transition {
+  from {
+    left: -100vw;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes transition {
+  from {
+    left: -100vw;
+  }
+  to {
+    left: 0;
+  }
+}
+
 @media only screen and (max-width: 992px) {
   .interestsCont .heading {
     font-size: 2em;
@@ -84,11 +127,8 @@
   }
   .interestsCont .content {
     margin: 10vh 1em 0;
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
-    grid-gap: 1.5em;
   }
   .interestsCont .content > div {
     display: -webkit-box;

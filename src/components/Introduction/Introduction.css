@@ -98,8 +98,26 @@
           transform: translate(-50%, -50%);
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 5px;
-  -webkit-animation: pulse 1.7s infinite;
-          animation: pulse 1.7s infinite;
+  -webkit-animation: pulse 1s infinite alternate;
+          animation: pulse 1s infinite alternate;
+}
+
+@-webkit-keyframes down {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: 0.2em;
+  }
+}
+
+@keyframes down {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: 0.2em;
+  }
 }
 
 @-webkit-keyframes pulse {
@@ -332,11 +350,7 @@
       opacity: 0.5;
     }
   }
-  .introCont .flyingObjects .object2 {
-    background-color: rgba(63, 155, 162, 0.8);
-    -webkit-animation: move2 4s linear infinite alternate;
-            animation: move2 4s linear infinite alternate;
-  }
+  .introCont .flyingObjects .object2,
   .introCont .flyingObjects .object3 {
     display: none;
   }
