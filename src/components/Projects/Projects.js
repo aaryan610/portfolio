@@ -8,6 +8,7 @@ import Tedx from "../../../src/assets/images/projects/tedxbitd.png";
 import TechEffin from "../../../src/assets/images/projects/techeffin.png";
 import TechnoHub from "../../../src/assets/images/projects/technohub.png";
 import LlityTech from "../../../src/assets/images/projects/llity.png";
+import { Fade } from "react-reveal";
 // import { useTrail, animated } from 'react-spring'
 
 
@@ -43,7 +44,9 @@ const Projects = () => {
         <React.Fragment>
             <Element name="projects" className="projectsCont">
                 <div className="content">
-                    <h1 className="heading">Few of my Projects</h1>
+                    <Fade right>
+                        <h1 className="heading">Few of my Projects</h1>
+                    </Fade>
                     <OwlCarousel className="owl-theme" margin={ 20 } dots={ false } nav={ true } navClass={ ["owl-prev", "owl-next"] } responsive={ options }>
                         <a onClick={(e) => pageTransition(e, "http://tedxbitd.in")} className="project">
                             <h3 className="title">TEDxBITD</h3>

@@ -8,9 +8,9 @@
 
   .hand {
     position: absolute;
-    transform: rotate(-180deg);
-    top: -75%;
-    left: 2%;
+    transform: rotate(-90deg) !important;
+    top: 0;
+    left: -40%;
   }
 
   .content {
@@ -105,6 +105,80 @@
       width: 7vw;
       height: 17vw;
       background-image: url("../../../src/assets/images/reachOut/man-sitting-on-chair.png");
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .reachOutCont {
+    .hand {
+      display: none;
+    }
+
+    .content {
+      margin: 1.5em 2em 0 0;
+
+      .heading {
+        font-size: 2em;
+      }
+
+      .text {
+        margin-top: 1em;
+        font-size: 0.9em;
+      }
+
+      .socialMedia {
+        margin-top: 3em;
+
+        .row {
+          grid-template-columns: repeat(3, 1fr);
+          justify-content: center;
+          grid-row-gap: 2.5em;
+          margin-left: 2em;
+
+          a {
+            padding: 0 1em;
+
+            i {
+              font-size: 1.7em;
+            }
+
+            div {
+              position: relative;
+              font-size: 0.7em;
+              top: 1em;
+              opacity: 1;
+              z-index: inherit;
+              white-space: nowrap;
+            }
+
+            &:nth-child(4) {
+              border-left: none;
+            }
+          }
+        }
+      }
+    }
+
+    .container {
+      position: relative;
+      top: 30vh;
+      right: 0;
+
+      .card1 {
+        width: 230px;
+        height: 230px;
+        background-image: url("../../../src/assets/images/reachOut/background.png");
+        border-radius: 50%;
+      }
+
+      .card2 {
+        top: 25vw;
+        left: 35vw;
+        width: 90px;
+        height: 180px;
+        background-image: url("../../../src/assets/images/reachOut/man-sitting-on-chair.png");
+      }
     }
   }
 }

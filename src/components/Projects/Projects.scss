@@ -202,11 +202,8 @@
   .projectsCont {
     .content {
       .heading {
-        text-align: right;
-        color: #000;
         font-size: 2em;
-        font-weight: 600;
-        margin: 1em 1.5em 0 0;
+        margin: 1em 1em 0 0;
       }
 
       .owl-theme {
@@ -217,11 +214,6 @@
           .title {
             font-size: 1.7em;
           }
-
-          img {
-            width: 100%;
-            border-radius: 10px;
-          }
         }
 
         .owl-prev,
@@ -229,17 +221,6 @@
           font-size: 1.5em;
         }
       }
-    }
-
-    .blob {
-      position: absolute;
-      top: 0;
-      left: 0;
-      fill: #d57575;
-      width: 50vmax;
-      animation: move 10s ease-in-out infinite;
-      transform-origin: 50% 50%;
-      z-index: 0;
     }
   }
 }

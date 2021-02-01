@@ -1,8 +1,9 @@
 import React from "react";
 import "./ReachOut.css";
 import { Element } from "react-scroll";
-import Hand from "../../../src/assets/images/reachOut/hand-gesture.png";
+import Hand from "../../../src/assets/images/reachOut/handshake.png";
 import { useSpring, animated } from 'react-spring';
+import { Fade } from "react-reveal";
 
 const ReachOut = () => {
     const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
@@ -15,36 +16,50 @@ const ReachOut = () => {
     return(
         <React.Fragment>
             <Element name="reachout" className="reachOutCont">
-                <img src={ Hand } alt="Hand Wave Gesture" className="hand" />
+                <Fade left>
+                    <img src={ Hand } alt="Hand Wave Gesture" className="hand" />
+                </Fade>
                 <div className="content">
-                    <h1 className="heading">Reach Out</h1>
-                    <p className="text">
-                        Found me interesting so far?
-                        <br />
-                        Here's how you can reach me:
-                    </p>
+                    <Fade right>
+                        <h1 className="heading">Reach Out</h1>
+                        <p className="text">
+                            Found me interesting so far?
+                            <br />
+                            Here's how you can reach me:
+                        </p>
+                    </Fade>
                     <div className="socialMedia">
                         <div className="row">
-                            <a href="#" target="_blank">
-                                <i className="fas fa-at"></i>
-                                <div>via E-mail</div>
-                            </a>
-                            <a href="#" target="_blank">
-                                <i className="fab fa-linkedin"></i>
-                                <div>through Linkedin</div>
-                            </a>
-                            <a href="#" target="_blank">
-                                <i className="fab fa-github"></i>
-                                <div>on GitHub</div>
-                            </a>
-                            <a href="#" target="_blank">
-                                <i className="fas fa-phone-alt"></i>
-                                <div>over a Call</div>
-                            </a>
-                            <a href="#" target="_blank">
-                                <i className="far fa-file-alt"></i>
-                                <div>view my Résumé</div>
-                            </a>
+                            <Fade up>
+                                <a href="mailto:aaryankhandu123@gmail.com" target="_blank">
+                                    <i className="fas fa-at"></i>
+                                    <div>via E-mail</div>
+                                </a>
+                            </Fade>
+                            <Fade down>
+                                <a href="https://www.linkedin.com/in/aaryan-khandelwal-89ba501a6/" target="_blank">
+                                    <i className="fab fa-linkedin"></i>
+                                    <div>through Linkedin</div>
+                                </a>
+                            </Fade>
+                            <Fade up>
+                                <a href="https://github.com/aaryan610/" target="_blank">
+                                    <i className="fab fa-github"></i>
+                                    <div>on GitHub</div>
+                                </a>
+                            </Fade>
+                            <Fade down>
+                                <a href="tel:+918103445828" target="_blank">
+                                    <i className="fas fa-phone-alt"></i>
+                                    <div>over a Call</div>
+                                </a>
+                            </Fade>
+                            <Fade up>
+                                <a href="#" target="_blank">
+                                    <i className="far fa-file-alt"></i>
+                                    <div>view my Résumé</div>
+                                </a>
+                            </Fade>
                         </div>
                     </div>
                 </div>
