@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.660655e2.chunk.css",
-    "main.js": "/portfolio/static/js/main.f1fcf557.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.f1fcf557.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.fcc566b0.chunk.css",
+    "main.js": "/portfolio/static/js/main.f2ed575b.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.f2ed575b.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.19198f94.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.19198f94.js.map",
     "static/css/2.a44c59e0.chunk.css": "/portfolio/static/css/2.a44c59e0.chunk.css",
-    "static/js/2.6e53446e.chunk.js": "/portfolio/static/js/2.6e53446e.chunk.js",
-    "static/js/2.6e53446e.chunk.js.map": "/portfolio/static/js/2.6e53446e.chunk.js.map",
+    "static/js/2.83a97bf8.chunk.js": "/portfolio/static/js/2.83a97bf8.chunk.js",
+    "static/js/2.83a97bf8.chunk.js.map": "/portfolio/static/js/2.83a97bf8.chunk.js.map",
     "static/js/3.d5de7b79.chunk.js": "/portfolio/static/js/3.d5de7b79.chunk.js",
     "static/js/3.d5de7b79.chunk.js.map": "/portfolio/static/js/3.d5de7b79.chunk.js.map",
     "index.html": "/portfolio/index.html",
     "static/css/2.a44c59e0.chunk.css.map": "/portfolio/static/css/2.a44c59e0.chunk.css.map",
-    "static/css/main.660655e2.chunk.css.map": "/portfolio/static/css/main.660655e2.chunk.css.map",
-    "static/js/2.6e53446e.chunk.js.LICENSE.txt": "/portfolio/static/js/2.6e53446e.chunk.js.LICENSE.txt",
+    "static/css/main.fcc566b0.chunk.css.map": "/portfolio/static/css/main.fcc566b0.chunk.css.map",
+    "static/js/2.83a97bf8.chunk.js.LICENSE.txt": "/portfolio/static/js/2.83a97bf8.chunk.js.LICENSE.txt",
     "static/media/1.200ee47a.png": "/portfolio/static/media/1.200ee47a.png",
-    "static/media/ReachOut.css": "/portfolio/static/media/sun.2878d5e0.svg",
     "static/media/hand-gesture.1399ad38.png": "/portfolio/static/media/hand-gesture.1399ad38.png",
     "static/media/hand-gesture.6de81cd6.png": "/portfolio/static/media/hand-gesture.6de81cd6.png",
     "static/media/llity.9640f1e7.png": "/portfolio/static/media/llity.9640f1e7.png",
+    "static/media/ReachOut.css": "/portfolio/static/media/man-sitting-on-chair.3c05a019.png",
     "static/media/techeffin.cf75a9e7.png": "/portfolio/static/media/techeffin.cf75a9e7.png",
     "static/media/technohub.880b97cd.png": "/portfolio/static/media/technohub.880b97cd.png",
     "static/media/tedxbitd.8d08987c.png": "/portfolio/static/media/tedxbitd.8d08987c.png",
@@ -28,8 +28,8 @@
   "entrypoints": [
     "static/js/runtime-main.19198f94.js",
     "static/css/2.a44c59e0.chunk.css",
-    "static/js/2.6e53446e.chunk.js",
-    "static/css/main.660655e2.chunk.css",
-    "static/js/main.f1fcf557.chunk.js"
+    "static/js/2.83a97bf8.chunk.js",
+    "static/css/main.fcc566b0.chunk.css",
+    "static/js/main.f2ed575b.chunk.js"
   ]
 }
