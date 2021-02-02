@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import { Fade } from "react-reveal";
 import LogoWhite from "../../assets/images/logos/logo-white.png";
 import { Link } from "react-scroll";
 
-const navbar = () => {
+const Navbar = () => {
+    const [classes, setClasses] = useState("mobileNav");
+
     return(
         <React.Fragment>
             <nav className="navbar">
@@ -33,4 +35,4 @@ const navbar = () => {
     );
 };
 
-export default navbar;
+export default Navbar;

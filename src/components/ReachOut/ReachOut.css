@@ -49,11 +49,47 @@
   text-decoration: none;
   text-align: center;
   padding: 0 0.8em;
+  cursor: pointer;
 }
 
 .reachOutCont .content .socialMedia .row a i {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.2);
   color: #fff;
-  font-size: 3em;
+  font-size: 1.8em;
+  border-radius: 50%;
+  padding: 20px;
+  height: calc(1.8em + 20px);
+  width: calc(1.8em + 20px);
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.reachOutCont .content .socialMedia .row a i::after {
+  position: absolute;
+  content: "";
+  border: 2px solid #fff;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.reachOutCont .content .socialMedia .row a i:hover {
+  background-color: #fff;
+  color: #5d2a42;
+}
+
+.reachOutCont .content .socialMedia .row a i:hover::after {
+  opacity: 1;
+  height: 120%;
+  width: 120%;
 }
 
 .reachOutCont .content .socialMedia .row a div {
@@ -75,7 +111,7 @@
 }
 
 .reachOutCont .content .socialMedia .row a:hover div {
-  top: 120%;
+  top: 130%;
   opacity: 1;
   z-index: inherit;
 }
@@ -133,7 +169,7 @@
     font-size: 0.9em;
   }
   .reachOutCont .content .socialMedia {
-    margin-top: 3em;
+    margin-top: 5em;
   }
   .reachOutCont .content .socialMedia .row {
     -ms-grid-columns: (1fr)[3];
@@ -148,7 +184,9 @@
     padding: 0 1em;
   }
   .reachOutCont .content .socialMedia .row a i {
-    font-size: 1.7em;
+    font-size: 1em;
+    height: auto;
+    width: auto;
   }
   .reachOutCont .content .socialMedia .row a div {
     position: relative;
@@ -160,6 +198,9 @@
   }
   .reachOutCont .content .socialMedia .row a:nth-child(4) {
     border-left: none;
+  }
+  .reachOutCont .content .socialMedia .row a:hover div {
+    top: 1em;
   }
   .reachOutCont .container {
     position: relative;

@@ -4,14 +4,13 @@ import Introduction from "../../components/Introduction/Introduction";
 import Interests from "../../components/Interests/Interests";
 import Projects from "../../components/Projects/Projects";
 import ReachOut from "../../components/ReachOut/ReachOut";
+import Parallax from "../../components/Parallax";
 
 const Dashboard = () => {
-    useEffect(() => {
-    }, []);
-
     return(
         <React.Fragment>
           <Navbar />
+          {/* <Parallax /> */}
           <Introduction />
           <Interests />
           <Projects />

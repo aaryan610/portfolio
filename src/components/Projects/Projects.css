@@ -6,11 +6,20 @@
   overflow: hidden;
 }
 
+.projectsCont .hand {
+  position: absolute;
+  bottom: 10%;
+  right: -30%;
+  z-index: 2;
+}
+
 .projectsCont .content {
+  position: relative;
   z-index: 1000;
 }
 
 .projectsCont .content .heading {
+  position: relative;
   text-align: right;
   color: #000;
   font-size: 3em;
@@ -20,7 +29,7 @@
 
 .projectsCont .content .owl-theme {
   width: 95vw;
-  margin: 15vh 2vw;
+  margin: 15vh 3vw;
 }
 
 .projectsCont .content .owl-theme .project {
@@ -50,6 +59,14 @@
   margin-top: 2em;
   width: 100%;
   border-radius: 10px;
+}
+
+.projectsCont .content .owl-theme .project .stack {
+  margin-top: 2em;
+}
+
+.projectsCont .content .owl-theme .project .stack strong {
+  font-weight: 600;
 }
 
 .projectsCont .content .owl-theme .owl-prev,
@@ -186,13 +203,17 @@
 }
 
 @media only screen and (max-width: 992px) {
+  .projectsCont .hand {
+    height: 30vh;
+    right: -90%;
+  }
   .projectsCont .content .heading {
     font-size: 2em;
-    margin: 1em 1em 0 0;
+    margin: 1em 0.7em 0 0;
   }
   .projectsCont .content .owl-theme {
     width: 90vw;
-    margin: 10vh 4vw;
+    margin: 10vh 6.5vw;
   }
   .projectsCont .content .owl-theme .project .title {
     font-size: 1.7em;

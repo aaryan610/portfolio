@@ -5,10 +5,19 @@
   background-color: #ffd1c1;
   overflow: hidden;
 
+  .hand {
+    position: absolute;
+    bottom: 10%;
+    right: -30%;
+    z-index: 2;
+  }
+
   .content {
+    position: relative;
     z-index: 1000;
 
     .heading {
+      position: relative;
       text-align: right;
       color: #000;
       font-size: 3em;
@@ -18,7 +27,7 @@
 
     .owl-theme {
       width: 95vw;
-      margin: 15vh 2vw;
+      margin: 15vh 3vw;
 
       .project {
         display: block;
@@ -43,6 +52,14 @@
           margin-top: 2em;
           width: 100%;
           border-radius: 10px;
+        }
+
+        .stack {
+          margin-top: 2em;
+
+          strong {
+            font-weight: 600;
+          }
         }
       }
 
@@ -200,15 +217,20 @@
 
 @media only screen and (max-width: 992px) {
   .projectsCont {
+    .hand {
+      height: 30vh;
+      right: -90%;
+    }
+
     .content {
       .heading {
         font-size: 2em;
-        margin: 1em 1em 0 0;
+        margin: 1em 0.7em 0 0;
       }
 
       .owl-theme {
         width: 90vw;
-        margin: 10vh 4vw;
+        margin: 10vh 6.5vw;
 
         .project {
           .title {

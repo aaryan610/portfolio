@@ -104,10 +104,12 @@
 
 @media only screen and (max-width: 992px) {
   .interestsCont {
+    padding-bottom: 5vh;
+
     .heading {
       font-size: 2em;
       width: 90vw;
-      margin: 1em 0 0 1em;
+      margin: 1em 0 0 0.5em;
     }
 
     .hand {

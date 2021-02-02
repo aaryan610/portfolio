@@ -42,10 +42,43 @@
           text-decoration: none;
           text-align: center;
           padding: 0 0.8em;
+          cursor: pointer;
 
           i {
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.2);
             color: #fff;
-            font-size: 3em;
+            font-size: 1.8em;
+            border-radius: 50%;
+            padding: 20px;
+            height: calc(1.8em + 20px);
+            width: calc(1.8em + 20px);
+            transition: 0.3s all ease;
+
+            &::after {
+              position: absolute;
+              content: "";
+              border: 2px solid #fff;
+              height: 100%;
+              width: 100%;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              border-radius: 50%;
+              opacity: 0;
+              transition: 0.3s all ease;
+            }
+
+            &:hover {
+              background-color: #fff;
+              color: #5d2a42;
+
+              &::after {
+                opacity: 1;
+                height: 120%;
+                width: 120%;
+              }
+            }
           }
 
           div {
@@ -66,7 +99,7 @@
 
           &:hover {
             div {
-              top: 120%;
+              top: 130%;
               opacity: 1;
               z-index: inherit;
             }
@@ -128,7 +161,7 @@
       }
 
       .socialMedia {
-        margin-top: 3em;
+        margin-top: 5em;
 
         .row {
           grid-template-columns: repeat(3, 1fr);
@@ -140,7 +173,9 @@
             padding: 0 1em;
 
             i {
-              font-size: 1.7em;
+              font-size: 1em;
+              height: auto;
+              width: auto;
             }
 
             div {
@@ -154,6 +189,12 @@
 
             &:nth-child(4) {
               border-left: none;
+            }
+
+            &:hover {
+              div {
+                top: 1em;
+              }
             }
           }
         }

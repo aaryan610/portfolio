@@ -5,6 +5,17 @@ import Hand from "../../../src/assets/images/reachOut/handshake.png";
 import { useSpring, animated } from 'react-spring';
 import { Fade } from "react-reveal";
 
+const pageTransition = (e, link) => {
+    e.preventDefault();
+
+    document.querySelector(".pageTransitions").classList.add("show");
+
+    setTimeout(() => {
+        window.open(link);
+        document.querySelector(".pageTransitions").classList.remove("show");
+    }, 1200);
+};
+
 const ReachOut = () => {
     const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
     const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`
@@ -31,31 +42,31 @@ const ReachOut = () => {
                     <div className="socialMedia">
                         <div className="row">
                             <Fade up>
-                                <a href="mailto:aaryankhandu123@gmail.com" target="_blank">
+                                <a onClick={(e) => pageTransition(e, "mailto:aaryankhandu123@gmail.com")} target="_blank">
                                     <i className="fas fa-at"></i>
                                     <div>via E-mail</div>
                                 </a>
                             </Fade>
                             <Fade down>
-                                <a href="https://www.linkedin.com/in/aaryan-khandelwal-89ba501a6/" target="_blank">
+                                <a onClick={(e) => pageTransition(e, "https://www.linkedin.com/in/aaryan-khandelwal-89ba501a6/")} target="_blank">
                                     <i className="fab fa-linkedin"></i>
                                     <div>through Linkedin</div>
                                 </a>
                             </Fade>
                             <Fade up>
-                                <a href="https://github.com/aaryan610/" target="_blank">
+                                <a onClick={(e) => pageTransition(e, "https://github.com/aaryan610/")} target="_blank">
                                     <i className="fab fa-github"></i>
                                     <div>on GitHub</div>
                                 </a>
                             </Fade>
                             <Fade down>
-                                <a href="tel:+918103445828" target="_blank">
+                                <a onClick={(e) => pageTransition(e, "tel:+918103445828")} target="_blank">
                                     <i className="fas fa-phone-alt"></i>
                                     <div>over a Call</div>
                                 </a>
                             </Fade>
                             <Fade up>
-                                <a href="#" target="_blank">
+                                <a onClick={(e) => pageTransition(e, "#")} target="_blank">
                                     <i className="far fa-file-alt"></i>
                                     <div>view my Résumé</div>
                                 </a>

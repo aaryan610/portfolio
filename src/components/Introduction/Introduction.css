@@ -20,7 +20,7 @@
 }
 
 .introCont .introDesc {
-  margin-top: 30vh;
+  margin-top: 22vh;
   margin-left: 15vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -58,7 +58,7 @@
 
 .introCont .introDesc .right button {
   position: relative;
-  margin: 2em 0 0 0;
+  margin: 2em 0 0 3em;
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
@@ -68,7 +68,7 @@
   padding: 10px 45px;
   border-radius: 5px;
   border: none;
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: 500;
   outline: none;
   cursor: pointer;
@@ -287,7 +287,7 @@
 @media only screen and (max-width: 992px) {
   .introCont .introDesc {
     margin-top: 20vh;
-    margin-left: 0;
+    margin-left: -1em;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -310,13 +310,18 @@
     font-size: 2em;
     font-weight: 600;
     margin-bottom: 0.5em;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .introCont .introDesc .right h1 div {
+    display: inline !important;
   }
   .introCont .introDesc .right p {
     font-size: 0.95em;
     width: 100%;
   }
   .introCont .introDesc .right button {
-    margin: 2em 0 0 0;
+    margin: 2em 0 0 -0.5em;
     padding: 10px 45px;
     font-size: 0.9em;
   }
@@ -457,6 +462,12 @@
       bottom: 10vh;
       left: 10vw;
     }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .introCont .introDesc .right h1 div {
+    display: block !important;
   }
 }
 /*# sourceMappingURL=Introduction.css.map */

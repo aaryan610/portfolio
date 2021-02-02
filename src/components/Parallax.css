@@ -1,0 +1,66 @@
+:root {
+  --div-width: 150px;
+  --div-height: 150px;
+  --central-range: 150px;
+  --negative-central-range: -150px;
+}
+
+.parallax {
+  position: fixed;
+  top: 5em;
+  left: 5em;
+  transform-style: preserve-3d;
+  width: var(--div-width);
+  height: var(--div-height);
+  animation: rotate 17s ease-in-out infinite alternate;
+  z-index: 1;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotateX(720deg) rotateY(720deg);
+  }
+}
+
+.parallax div {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  border: 3px solid #fff;
+}
+.parallax div:nth-child(1) {
+  transform: translateZ(calc(var(--central-range) / 2));
+}
+.parallax div:nth-child(2) {
+  transform: translateZ(calc(var(--negative-central-range) / 2));
+}
+.parallax div:nth-child(3) {
+  transform: rotateY(90deg) translateZ(calc(var(--central-range) / 2));
+}
+.parallax div:nth-child(4) {
+  transform: rotateY(90deg) translateZ(calc(var(--negative-central-range) / 2));
+}
+.parallax div:nth-child(5) {
+  transform: rotateX(90deg) translateZ(calc(var(--negative-central-range) / 2));
+}
+.parallax div:nth-child(6) {
+  transform: rotateX(90deg) translateZ(calc(var(--central-range) / 2));
+}
+
+@media only screen and (max-width: 992px) {
+  :root {
+    --div-width: 50px;
+    --div-height: 50px;
+    --central-range: 50px;
+    --negative-central-range: -50px;
+  }
+
+  .parallax {
+    top: 5em;
+    left: 1em;
+  }
+
+  .parallax div {
+    border: 1px solid #fff;
+  }
+}

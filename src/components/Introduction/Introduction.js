@@ -1,29 +1,48 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Introduction.css";
 import { Fade } from "react-reveal";
 import Tilt from "react-tilt";
 import { Link } from "react-scroll";
 import IntroductionPerson from "../../assets/images/introduction/1.png";
+import TextTransition, { presets } from "react-text-transition";
+
+const TEXTS = [
+  "Web Designer.",
+  "YouTuber."
+];
 
 const Introduction = () => {
+    const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+        const intervalId = setInterval(() =>
+            setIndex(index => index + 1),
+            2000
+        );
+    }, []);
+
     return(
         <React.Fragment>
             <div className="introCont">
                 <div className="semicircle"></div>
                 <div className="introDesc">
                     <Fade left>
-                        <Tilt className="Tilt" options={{ max : 25 }}>
+                        <Tilt className="Tilt" options={{ max: 25 }}>
                             <img src={ IntroductionPerson } alt="Web Designing Intoduction Illustration" />
                         </Tilt>
                     </Fade>
                     <Fade right>
                         <div className="right">
                             <h1>
-                                I am a Web Designer.
+                                I am a  <TextTransition
+                                            text={ TEXTS[index % TEXTS.length] }
+                                            springConfig={ presets.wobbly }
+                                            inline={true}
+                                        />
                             </h1>
                             <p>
                                 Hi, I am Aaryan Khandelwal, a sophomore student at BIT Durg of Electronics and Telecommunication branch, and I am currently working as a Senior Developer at TechEffin Software Consultancy Services.
-                                <br />
+                                <br /><br />
                                 My hobbies include making Educational YouTube videos.
                             </p>
                             <Link to="interests" spy={true} smooth={true} duration={800}>

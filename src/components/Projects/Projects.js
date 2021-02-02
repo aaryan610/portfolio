@@ -9,6 +9,7 @@ import TechEffin from "../../../src/assets/images/projects/techeffin.png";
 import TechnoHub from "../../../src/assets/images/projects/technohub.png";
 import LlityTech from "../../../src/assets/images/projects/llity.png";
 import { Fade } from "react-reveal";
+import Hand from "../../../src/assets/images/projects/hand-gesture.png";
 // import { useTrail, animated } from 'react-spring'
 
 
@@ -43,26 +44,49 @@ const Projects = () => {
     return(
         <React.Fragment>
             <Element name="projects" className="projectsCont">
+                <img src={ Hand } alt="Thumbs Up Hand Gesture" className="hand" />
                 <div className="content">
                     <Fade right>
                         <h1 className="heading">Few of my Projects</h1>
                     </Fade>
-                    <OwlCarousel className="owl-theme" margin={ 20 } dots={ false } nav={ true } navClass={ ["owl-prev", "owl-next"] } responsive={ options }>
+                    <OwlCarousel
+                        className="owl-theme"
+                        margin={ 20 }
+                        dots={ false }
+                        nav={ true }
+                        autoplay={ true }
+                        autoplayTimeout={ 2000 }
+                        autoplayHoverPause={ true }
+                        navClass={ ["owl-prev", "owl-next"] }
+                        responsive={ options }
+                    >
                         <a onClick={(e) => pageTransition(e, "http://tedxbitd.in")} className="project">
                             <h3 className="title">TEDxBITD</h3>
                             <img src={ Tedx } alt="TEDxBITD Project" />
+                            <div className="stack">
+                                <strong>Technology Stack</strong>: React JS, Firebase, SCSS
+                            </div>
                         </a>
                         <a onClick={(e) => pageTransition(e, "http://techeffin.com")} className="project">
                             <h3 className="title">TechEffin</h3>
                             <img src={ TechEffin } alt="TechEffin Software Consultancy Services" />
+                            <div className="stack">
+                                <strong>Technology Stack</strong>: HTML, SCSS, JavaScript
+                            </div>
                         </a>
                         <a onClick={(e) => pageTransition(e, "http://llity.tech")} className="project">
                             <h3 className="title">URL Shortener</h3>
                             <img src={ LlityTech } alt="Llity Tech URL Shortener" />
+                            <div className="stack">
+                                <strong>Technology Stack</strong>: HTML, CSS, php, mySQL
+                            </div>
                         </a>
                         <a onClick={(e) => pageTransition(e, "http://technohubbit.in")} className="project">
                             <h3 className="title">TechnoHub</h3>
                             <img src={ TechnoHub } alt="TechnoHub BITD" />
+                            <div className="stack">
+                                <strong>Technology Stack</strong>: React JS, Firebase, SCSS
+                            </div>
                         </a>
                     </OwlCarousel>
                 </div>
