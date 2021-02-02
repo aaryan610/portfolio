@@ -59,8 +59,6 @@
   font-size: 1.8em;
   border-radius: 50%;
   padding: 20px;
-  height: calc(1.8em + 20px);
-  width: calc(1.8em + 20px);
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
 }
@@ -185,8 +183,6 @@
   }
   .reachOutCont .content .socialMedia .row a i {
     font-size: 1em;
-    height: auto;
-    width: auto;
   }
   .reachOutCont .content .socialMedia .row a div {
     position: relative;

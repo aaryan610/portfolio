@@ -51,8 +51,6 @@
             font-size: 1.8em;
             border-radius: 50%;
             padding: 20px;
-            height: calc(1.8em + 20px);
-            width: calc(1.8em + 20px);
             transition: 0.3s all ease;
 
             &::after {
@@ -174,8 +172,6 @@
 
             i {
               font-size: 1em;
-              height: auto;
-              width: auto;
             }
 
             div {

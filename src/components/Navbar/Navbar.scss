@@ -7,7 +7,7 @@
   display: flex;
   justify-content: space-between;
   background: transparent;
-  z-index: 1000;
+  z-index: 10001;
 
   img {
     height: 20px;
@@ -29,6 +29,66 @@
   }
 }
 
+.mobileNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #e76f51;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10000;
+  transition: 0.3s all ease;
+
+  .navLists {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    overflow: hidden;
+
+    a {
+      text-transform: uppercase;
+      font-weight: 600;
+      text-decoration: none;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 300px;
+      width: 300px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      bottom: 100px;
+      right: -150px;
+      pointer-events: none;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 400px;
+      width: 400px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.2);
+      bottom: -150px;
+      right: -150px;
+      pointer-events: none;
+    }
+  }
+
+  &.show {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
 @media only screen and (max-width: 992px) {
   .navbar {
     flex-direction: row-reverse;
@@ -44,27 +104,57 @@
         display: none;
       }
 
-      div {
+      .navIcon {
+        position: relative;
+        width: 30px;
+        height: 20px;
         outline: none;
         cursor: pointer;
+        z-index: 10001;
+        transition: 0.5s ease-in-out;
 
-        .line {
+        span {
+          display: block;
+          position: absolute;
           height: 3px;
-          width: 30px;
-          background-color: #fff;
+          width: 100%;
+          background: #fff;
+          border-radius: 9px;
+          opacity: 1;
+          left: 0;
+          transform: rotate(0deg);
+          transition: 0.25s ease-in-out;
+
+          &:nth-child(1) {
+            top: 0;
+          }
+
+          &:nth-child(2) {
+            top: 9px;
+          }
+
+          &:nth-child(3) {
+            top: 18px;
+          }
         }
 
-        .line2 {
-          width: 20px;
-        }
+        &.open {
+          span {
+            &:nth-child(1) {
+              top: 9px;
+              transform: rotate(135deg);
+            }
 
-        .line3 {
-          width: 10px;
-        }
+            &:nth-child(2) {
+              opacity: 0;
+              left: -60px;
+            }
 
-        .line2,
-        .line3 {
-          margin-top: 6px;
+            &:nth-child(3) {
+              top: 9px;
+              transform: rotate(-135deg);
+            }
+          }
         }
       }
     }

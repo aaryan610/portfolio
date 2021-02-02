@@ -12,7 +12,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   background: transparent;
-  z-index: 1000;
+  z-index: 10001;
 }
 
 .navbar img {
@@ -36,6 +36,76 @@
   cursor: pointer;
 }
 
+.mobileNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #e76f51;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10000;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.mobileNav .navLists {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.mobileNav .navLists a {
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.mobileNav .navLists::before {
+  position: absolute;
+  content: "";
+  height: 300px;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  bottom: 100px;
+  right: -150px;
+  pointer-events: none;
+}
+
+.mobileNav .navLists::after {
+  position: absolute;
+  content: "";
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  bottom: -150px;
+  right: -150px;
+  pointer-events: none;
+}
+
+.mobileNav.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
 @media only screen and (max-width: 992px) {
   .navbar {
     -webkit-box-orient: horizontal;
@@ -53,24 +123,52 @@
   .navbar .center a {
     display: none;
   }
-  .navbar .center div {
+  .navbar .center .navIcon {
+    position: relative;
+    width: 30px;
+    height: 20px;
     outline: none;
     cursor: pointer;
+    z-index: 10001;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
   }
-  .navbar .center div .line {
+  .navbar .center .navIcon span {
+    display: block;
+    position: absolute;
     height: 3px;
-    width: 30px;
-    background-color: #fff;
+    width: 100%;
+    background: #fff;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
   }
-  .navbar .center div .line2 {
-    width: 20px;
+  .navbar .center .navIcon span:nth-child(1) {
+    top: 0;
   }
-  .navbar .center div .line3 {
-    width: 10px;
+  .navbar .center .navIcon span:nth-child(2) {
+    top: 9px;
   }
-  .navbar .center div .line2,
-  .navbar .center div .line3 {
-    margin-top: 6px;
+  .navbar .center .navIcon span:nth-child(3) {
+    top: 18px;
+  }
+  .navbar .center .navIcon.open span:nth-child(1) {
+    top: 9px;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+  .navbar .center .navIcon.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+  }
+  .navbar .center .navIcon.open span:nth-child(3) {
+    top: 9px;
+    -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
   }
 }
 /*# sourceMappingURL=Navbar.css.map */
