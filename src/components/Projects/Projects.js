@@ -75,7 +75,7 @@ const Projects = () => {
                                 <strong>Technology Stack</strong>: HTML, SCSS, JavaScript
                             </div>
                         </a>
-                        <a onClick={(e) => pageTransition(e, "http://llity.tech")} className="project">
+                        <a onClick={(e) => pageTransition(e, "https://github.com/aaryan610/shortener")} className="project">
                             <h3 className="title">URL Shortener</h3>
                             <img src={ LlityTech } alt="Llity Tech URL Shortener" />
                             <div className="stack">
