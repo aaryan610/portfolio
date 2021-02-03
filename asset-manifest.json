@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.774a202a.chunk.css",
-    "main.js": "/portfolio/static/js/main.92a51a37.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.92a51a37.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.001c3e39.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.001c3e39.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.d3717ec0.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.d3717ec0.js.map",
     "static/css/2.a44c59e0.chunk.css": "/portfolio/static/css/2.a44c59e0.chunk.css",
@@ -15,7 +15,7 @@
     "static/css/main.774a202a.chunk.css.map": "/portfolio/static/css/main.774a202a.chunk.css.map",
     "static/js/2.4d11855d.chunk.js.LICENSE.txt": "/portfolio/static/js/2.4d11855d.chunk.js.LICENSE.txt",
     "static/media/1.200ee47a.png": "/portfolio/static/media/1.200ee47a.png",
-    "static/media/aaryan-khandelwal.08bf5199.pdf": "/portfolio/static/media/aaryan-khandelwal.08bf5199.pdf",
+    "static/media/aaryan-khandelwal.8cf17a42.pdf": "/portfolio/static/media/aaryan-khandelwal.8cf17a42.pdf",
     "static/media/hand-gesture.1859d5c2.png": "/portfolio/static/media/hand-gesture.1859d5c2.png",
     "static/media/hand-gesture.6de81cd6.png": "/portfolio/static/media/hand-gesture.6de81cd6.png",
     "static/media/handshake.4e374836.png": "/portfolio/static/media/handshake.4e374836.png",
@@ -33,6 +33,6 @@
     "static/css/2.a44c59e0.chunk.css",
     "static/js/2.4d11855d.chunk.js",
     "static/css/main.774a202a.chunk.css",
-    "static/js/main.92a51a37.chunk.js"
+    "static/js/main.001c3e39.chunk.js"
   ]
 }
