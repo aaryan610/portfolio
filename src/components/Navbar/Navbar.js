@@ -3,6 +3,7 @@ import "./Navbar.css";
 import { Fade } from "react-reveal";
 import LogoWhite from "../../assets/images/logos/logo-white.png";
 import { Link } from "react-scroll";
+import Resume from "../../assets/resume/aaryan-khandelwal.pdf";
 
 const Navbar = () => {
     const [classes, setClasses] = useState("mobileNav");
@@ -20,7 +21,7 @@ const Navbar = () => {
                         <Link to="projects" spy={true} smooth={true} duration={800}>
                             Projects
                         </Link>
-                        <a href="#">Résumé</a>
+                        <a href={ Resume } target="_blank">Résumé</a>
                         <Link to="reachout" spy={true} smooth={true} duration={800}>
                             Reach Out
                         </Link>
@@ -29,7 +30,7 @@ const Navbar = () => {
                             onClick={() => {
                                 classes === "mobileNav" ? setClasses("mobileNav show") : setClasses("mobileNav"); 
                                 toggle === "navIcon" ? setToggle("navIcon open") : setToggle("navIcon");
-                                }}
+                            }}
                         >
                             <span></span>
                             <span></span>
@@ -40,14 +41,44 @@ const Navbar = () => {
             </nav>
             <nav className={ classes }>
                 <div className="navLists">
-                    <Link to="interests" onClick={() => setClasses("mobileNav") } spy={true} smooth={true} duration={800}>
+                    <Link
+                        to="interests"
+                        onClick={() => {
+                            setClasses("mobileNav");
+                            setToggle("navIcon"); 
+                        }}
+                        spy={true} smooth={true} duration={800}
+                    >
                         Interests
                     </Link>
-                    <Link to="projects" onClick={() => setClasses("mobileNav") } spy={true} smooth={true} duration={800}>
+                    <Link
+                        to="projects"
+                        onClick={() => {
+                            setClasses("mobileNav");
+                            setToggle("navIcon"); 
+                        }}
+                        spy={true} smooth={true} duration={800}
+                    >
                         Projects
                     </Link>
-                    <a href="#">Résumé</a>
-                    <Link to="reachout" onClick={() => setClasses("mobileNav") } spy={true} smooth={true} duration={800}>
+                    <a
+                        href={ Resume }
+                        target="_blank"
+                        onClick={() => {
+                            setClasses("mobileNav");
+                            setToggle("navIcon"); 
+                        }}
+                    >
+                        Résumé
+                    </a>
+                    <Link
+                        to="reachout"
+                        onClick={() => {
+                            setClasses("mobileNav");
+                            setToggle("navIcon"); 
+                        }}
+                        spy={true} smooth={true} duration={800}
+                    >
                         Reach Out
                     </Link>
                 </div>

@@ -4,6 +4,7 @@ import { Element } from "react-scroll";
 import Hand from "../../../src/assets/images/reachOut/handshake.png";
 import { useSpring, animated } from 'react-spring';
 import { Fade } from "react-reveal";
+import Resume from "../../assets/resume/aaryan-khandelwal.pdf";
 
 const pageTransition = (e, link) => {
     e.preventDefault();
@@ -64,7 +65,7 @@ const ReachOut = () => {
                                 </a>
                             </Fade>
                             <Fade up>
-                                <a onClick={(e) => pageTransition(e, "#")} target="_blank">
+                                <a onClick={(e) => pageTransition(e, Resume)} target="_blank">
                                     <i className="far fa-file-alt"></i>
                                     <div>view my Résumé</div>
                                 </a>

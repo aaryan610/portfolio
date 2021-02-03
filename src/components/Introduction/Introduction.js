@@ -5,6 +5,7 @@ import Tilt from "react-tilt";
 import { Link } from "react-scroll";
 import IntroductionPerson from "../../assets/images/introduction/1.png";
 import TextTransition, { presets } from "react-text-transition";
+import Plants from "../../assets/images/introduction/plants.png";
 
 const TEXTS = [
   "Web Designer.",
@@ -25,6 +26,7 @@ const Introduction = () => {
         <React.Fragment>
             <div className="introCont">
                 <div className="semicircle"></div>
+                <img src={ Plants } alt="Plants and Sun 3d Icons" className="plants" />
                 <div className="introDesc">
                     <Fade left>
                         <Tilt className="Tilt" options={{ max: 25 }}>

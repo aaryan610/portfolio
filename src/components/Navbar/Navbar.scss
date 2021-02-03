@@ -93,10 +93,10 @@
   .navbar {
     flex-direction: row-reverse;
     align-items: center;
-    width: 90vw;
+    justify-content: center;
 
     img {
-      height: 15px;
+      height: 13px;
     }
 
     .center {
@@ -106,7 +106,7 @@
 
       .navIcon {
         position: relative;
-        width: 30px;
+        width: 27px;
         height: 20px;
         outline: none;
         cursor: pointer;

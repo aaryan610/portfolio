@@ -116,6 +116,30 @@
   }
 }
 
+.interestsCont::before {
+  position: absolute;
+  content: "";
+  height: 300px;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  bottom: 100px;
+  left: -150px;
+  pointer-events: none;
+}
+
+.interestsCont::after {
+  position: absolute;
+  content: "";
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  bottom: -150px;
+  left: -150px;
+  pointer-events: none;
+}
+
 @media only screen and (max-width: 992px) {
   .interestsCont {
     padding-bottom: 5vh;
@@ -168,6 +192,18 @@
   }
   .interestsCont .content > div.youtube .right {
     margin-left: 0;
+  }
+  .interestsCont::before {
+    height: 200px;
+    width: 200px;
+    bottom: 100px;
+    left: -100px;
+  }
+  .interestsCont::after {
+    height: 300px;
+    width: 300px;
+    bottom: -100px;
+    left: -100px;
   }
 }
 /*# sourceMappingURL=Interests.css.map */

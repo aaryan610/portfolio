@@ -19,6 +19,13 @@
   z-index: -1;
 }
 
+.introCont .plants {
+  position: absolute;
+  bottom: 0;
+  right: 2em;
+  height: 300px;
+}
+
 .introCont .introDesc {
   margin-top: 22vh;
   margin-left: 15vw;
@@ -285,6 +292,9 @@
 }
 
 @media only screen and (max-width: 992px) {
+  .introCont .plants {
+    display: none;
+  }
   .introCont .introDesc {
     margin-top: 20vh;
     margin-left: -1em;
