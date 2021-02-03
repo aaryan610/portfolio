@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.54cdc72d.chunk.css",
+    "main.css": "/portfolio/static/css/main.24591e81.chunk.css",
     "main.js": "/portfolio/static/js/main.b3337bbb.chunk.js",
     "main.js.map": "/portfolio/static/js/main.b3337bbb.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.d3717ec0.js",
@@ -12,7 +12,7 @@
     "static/js/3.d08d0f16.chunk.js.map": "/portfolio/static/js/3.d08d0f16.chunk.js.map",
     "index.html": "/portfolio/index.html",
     "static/css/2.a44c59e0.chunk.css.map": "/portfolio/static/css/2.a44c59e0.chunk.css.map",
-    "static/css/main.54cdc72d.chunk.css.map": "/portfolio/static/css/main.54cdc72d.chunk.css.map",
+    "static/css/main.24591e81.chunk.css.map": "/portfolio/static/css/main.24591e81.chunk.css.map",
     "static/js/2.4d11855d.chunk.js.LICENSE.txt": "/portfolio/static/js/2.4d11855d.chunk.js.LICENSE.txt",
     "static/media/1.200ee47a.png": "/portfolio/static/media/1.200ee47a.png",
     "static/media/aaryan-khandelwal.bbd797fa.pdf": "/portfolio/static/media/aaryan-khandelwal.bbd797fa.pdf",
@@ -32,7 +32,7 @@
     "static/js/runtime-main.d3717ec0.js",
     "static/css/2.a44c59e0.chunk.css",
     "static/js/2.4d11855d.chunk.js",
-    "static/css/main.54cdc72d.chunk.css",
+    "static/css/main.24591e81.chunk.css",
     "static/js/main.b3337bbb.chunk.js"
   ]
 }
