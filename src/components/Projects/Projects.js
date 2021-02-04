@@ -54,10 +54,6 @@ const Projects = () => {
                         margin={ 20 }
                         dots={ false }
                         nav={ true }
-                        loop={ true }
-                        autoplay={ true }
-                        autoplayTimeout={ 2000 }
-                        autoplayHoverPause={ true }
                         navClass={ ["owl-prev", "owl-next"] }
                         responsive={ options }
                     >
